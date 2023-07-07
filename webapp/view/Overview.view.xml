@@ -1,0 +1,34 @@
+<mvc:View controllerName="ui5.futureview.controller.App" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:grid="sap.ui.layout.cssgrid" xmlns:f="sap.f">
+		<Page title="{i18n>title}">
+			<content>
+				<Panel height="100%" width="100%" backgroundDesign="Transparent">
+					<f:GridList 
+						headerText="Leagues"
+						mode="None"
+						items="{leagueInfo>/response}">
+						<f:customLayout>
+							<grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="0.5rem" />
+						</f:customLayout>
+						<f:GridListItem
+							press="onPress"
+							type="Active"
+							counter="{leagueInfo>league/id}">
+							<VBox height="100%">
+								<HBox height="auto" class="sapUiSmallMargin" alignItems="Center" visible="true">
+									<Image src="{leagueInfo>league/logo}" width="3rem" class="sapUiSmallMarginEnd"/>
+								</HBox>
+								<HBox height="50%" class="sapUiSmallMargin" alignItems="Center" visible="true">
+									<Image src="{leagueInfo>country/flag}" width="3rem" class="sapUiSmallMarginEnd"/>
+									<VBox>
+										<Title text="{leagueInfo>league/name}" wrapping="true"/>
+										<Label text="{leagueInfo>league/type}" wrapping="true"/>
+									</VBox>
+								</HBox>
+							</VBox>
+						</f:GridListItem>
+					</f:GridList>
+				</Panel>
+			</content>
+		</Page>
+</mvc:View>

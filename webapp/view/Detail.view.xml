@@ -1,0 +1,29 @@
+<mvc:View
+    controllerName="ui5.futureview.controller.Detail"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:grid="sap.ui.layout.cssgrid">
+	<Panel
+		id="panelCSSGrid"
+		width="100%"
+		height="100%">
+	<Page
+		title="{i18n>detailPageTitle}"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+		<ObjectHeader
+			intro="{leagueInfo>league/name}"
+			title="{leagueInfo>league/type}"/>
+		<grid:CSSGrid
+			id="grid1"
+			gridTemplateColumns="repeat(2,minmax(250px, 1fr))"
+			gridTemplateRows="1fr 3fr"
+			gridGap="1rem">
+			<VBox class="demoBox">
+				<Title text="{leagueInfo>league/name}" wrapping="true" />
+				<Text text="{leagueInfo>league/type}" wrapping="true" />
+			</VBox>
+		</grid:CSSGrid>
+	</Page>
+	</Panel>
+</mvc:View>
