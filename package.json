@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "description": "A simple ui5 application.",
-  "author": "John Doe <john@doe.com>",
+  "author": "Carlos Vaz",
   "keywords": [
     "ui5",
     "openui5",
@@ -11,12 +11,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/John Doe/dev.my.project.git"
+    "url": "https://github.com/cfvaz1973/ui5-futureview"
   },
   "bugs": {
-    "url": "https://github.com/John Doe/dev.my.project/issues"
+    "url": "https://github.com/cfvaz1973/ui5-futureview/issues"
   },
-  "homepage": "https://github.com/John Doe/dev.my.project.git#readme",
+  "homepage": "https://github.com/cfvaz1973/ui5-futureviews#readme",
   "main": "webapp/index.html",
   "scripts": {
     "start": "ui5 serve",
